@@ -114,10 +114,11 @@ function draw() {
    gameover.visible=true;
     restart.visible=true;
   
-    if (mousePressedOver(restart) ){
+    if (touches.length>0 ||mousePressedOver(restart) ){
   gamestate=start;
   gameover.visible=false;
   restart.visible=false;
+      touches=[];
 }
   }  
   drawSprites();
